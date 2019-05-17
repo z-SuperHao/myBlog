@@ -1,0 +1,100 @@
+*{
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	 /* 所有的都以border-box计算宽度 
+	 main的内容有边框*/
+}
+body{
+	background:#454545;
+	line-height:1.7;
+}
+ /*清除默认样式*{margin:0;padding:0;}和引入normalize<link rel="stylesheet" 
+ href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css" />作用一样
+ */
+a{
+	text-decoration: none;/*清除下划线  文字装饰：none*/
+}
+ a,body{
+	/* 为a和body设置样式 */ 
+	color:#eee;
+}
+.side-bar{
+	float:left;
+	width:20%;/*页面的20%*/
+	/* side-bar 侧栏不随着页面滚动 */
+	position: fixed;
+}
+/* .side-bar下的所有子元素，他的儿子不是孙子 */
+.side-bar >*{
+	padding: 10px 15px;
+}
+.side-bar .nav a,
+.side-bar .tag-list a{
+	display: block;
+	padding: 5px;
+	color: #888;
+	/* 颜色变化的时间 */
+	-webkit-transition:color 200ms; 
+	-o-transition:color 200ms;
+	transition:color 200ms;
+	
+}
+.side-bar .nav a{
+	font-weight: 700;
+}
+
+.side-bar .nav a:hover,
+.side-bar .tag-list a:hover{
+	color:#eee; 
+}
+.main{
+	float:right;
+	width:80%;
+	/* background: #fff; */
+	color:#454545;
+    
+}
+.header .logo{
+	/* 指定后代元素 */
+	line-height: 1;
+	border:5px solid #eee;
+	padding: 10px 20px;
+	font-size: 30px;
+	display: inline-block;
+	margin-bottom: 10px;
+} 
+.article-list ,.article{
+	margin-right: 30%;
+	background:#fff;
+	padding: 20px 30px;
+	-webkit-box-shadow:  0 0 3px 2px rgba(0,0,0,.2);
+	box-shadow: 0 0 3px 2px rgba(0, 0, 0, .2);
+	/* inset  hoff voff blur color;
+	    inset往里还是往外（应该往外所以删掉） hoff水平偏移  voff垂直（上下）偏移  blur羽化扩散（阴影扩散多大）阴影整体扩散多大（2px) color 颜色（投影颜色）*/
+}
+.article-list .item{
+	margin-bottom: 25px;
+}
+.article-list .item .title,
+.article.title{
+	font-size: 22px;
+	font-weight: 700;
+	/* margin: 10px 0; */
+	color: #454545;
+	
+}
+.article-list .item .status,
+.article .status{
+	font-size: 13px;
+	color: #ccc;
+	/* margin: 10px 0; */
+}
+.article-list .item >*,
+.article > *{
+	margin: 10px 0;
+}
+#menu-checkbox,#menu-toggle{
+	display: none;
+}
+
+	

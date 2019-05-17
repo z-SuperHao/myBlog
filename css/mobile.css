@@ -1,0 +1,49 @@
+.side-bar{
+    position: relative;
+    /* 相对定位 */
+    width: 100%;
+    float: none;
+}
+.main{
+    width: 100%;
+    padding-left:10px;
+    padding-right: 10px;
+    
+}
+.article-list,
+.article{
+    margin:0;
+}
+.side-bar .nav,
+.side-bar .tag-list{
+    text-align: center;
+/* 文字居中 */
+    display: none;
+/* 开始时，导航栏nav和标签列表tag-list是隐藏的 */
+
+}
+/* #menu-checkbox{
+    display: none;
+} */
+/* 让其被隐藏 ，可以移到main.css中 */
+#menu-checkbox:checked~.nav,
+#menu-checkbox:checked~.tag-list{
+    display: block;
+}
+
+#menu-toggle{
+    /* 绝对定位 */
+    /* 当开启了元素的定位（position是一个非static值）时，可以通过
+    right  left  top  bottom 设置偏移量
+    relative 生成相对定位，相对与其正常位置进行定位
+    fixed 生成绝对定位，固定定位是绝对定位的一种
+    absolute 生成绝对定位
+    static 默认值没有开启定位 */
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+}
